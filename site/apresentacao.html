@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sandboxpédia</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="apresentacao.css">
+  <script src="js/script.js"></script>
+  <script type="module">
+    import * as THREE from 'https://unpkg.com/three/build/three.module.js';
+    // cria a cena, a câmera e o renderizador
+    var cena = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    var renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    // carrega o modelo 3D
+    var loader = new THREE.ObjectLoader();
+    loader.load('item/fogueira.json', function (obj) {
+      cena.add(obj);
+    });
+
+    // posiciona a câmera
+    camera.position.z = 5;
+
+    // renderiza a cena
+    function animate() {
+      requestAnimationFrame(animate);
+      renderer.render(cena, camera);
+    }
+    animate();
+
+    // Our Javascript will go here.
+  </script>
+</head>
+
+<body>
+  <div id="container"></div>
+
+  <div class="bg"></div>
+  <div class="star-field">
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+
+    <nav class=" navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="assets/logo.png" width="90" alt="">
+      </a>
+      <button onclick="toggleMode()" class="btn btn-primary "></button>
+
+
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link ative" href="index.html">Página Inicial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="apresentacao.html">Apresentação</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Manual da marca.html">Artigos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="apresentacao.html#manualDaMarca">Manual da marca</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Gerenciamento de Usuário
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                <li><a class="dropdown-item" href="#">Login</a></li>
+                <li><a class="dropdown-item" href="#">Registro</a></li>
+                <li><a class="dropdown-item" href="#">Recuperação de Senha</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row vh-100">
+        <div class="col-md-5" id="manualDaMarca">
+          <a class="nav-link" href="apresentacao.html#intro">
+            <h2 style="background-color: var(--cor-secundaria); color: var(--cor-light); padding: 10px;">Manual da marca
+            </h2>
+            <p class="border" style="background-color: var(--cor-dark); color: var(--cor-light); padding: 20px;">Este
+              manual tem como
+              objetivo estabelecer diretrizes para a criação de conteúdo dentro do universo de nosso jogo pixelado.
+              Nele,
+              serão apresentadas as fontes que devem ser utilizadas, a forma como o jogo é evoluído e atualizado, a
+              padronização de itens e configurações, além de um sistema de feedback e sugestões para melhorias.
+            </p>
+            <div class="col-md-6 container" style="background-color: var(--cor-dark1)" id="tablet">
+              <img src="assets/logo.png" width="90%" alt="">
+
+              <h2>Item: Fogueira</h2>
+              <p class="border">Raridade: Comum</p>
+              <p class="border">Descrição: Uma fogueira comum feira de madeira</p>
+              <p class="border">Origem: ~~~ ~~~ ~~~</p>
+
+            </div>
+
+        </div>
+
+
+
+      </div>
+      <div class="row">
+        <div class="col-md-6 sidebar">
+          <a class="nav-link" class="nav-link" href="apresentacao.html#manualDaMarca">Manual da marca</a>
+          <a class="nav-link" href="apresentacao.html#primeiro">Primeiro objeto</a>
+          <a class="nav-link" href="apresentacao.html#intro">Introdução</a>
+          <a class="nav-link" href="apresentacao.html#fontes">Fontes</a>
+          <a class="nav-link" href="apresentacao.html#evolucao">Evolução do jogo</a>
+          <a class="nav-link" href="apresentacao.html#padronizacao">Padronização de itens e configurações</a>
+          <a class="nav-link" href="apresentacao.html#feedback">Feedback e sugestões</a>
+          <a class="nav-link" href="apresentacao.html#evolucao">Conclusão</a>
+          <a class="nav-link" href="apresentacao.html#descricao">Descrição do primeiro objeto.</a>
+        </div>
+
+        <div class="row vh-100">
+          <div class="col-md-12">
+            <a class="nav-link" href="apresentacao.html#fontes">
+              <h2 style="background-color: var(--cor-primaria); color: var(--cor-light); padding: 10px;" id="intro">
+                Introdução
+              </h2>
+            </a>
+            <p class="border" style="background-color: var(--cor-dark1); color: var(--cor-light); padding: 20px;">Este
+              manual tem como
+              objetivo estabelecer diretrizes para a criação de conteúdo dentro do universo de nosso jogo pixelado.
+              Nele,
+              serão apresentadas as fontes que devem ser utilizadas, a forma como o jogo é evoluído e atualizado, a
+              padronização de itens e configurações, além de um sistema de feedback e sugestões para melhorias.</p>
+          </div>
+        </div>
+        <div class="row vh-100">
+          <div class="col-md-12">
+            <a class="nav-link" href="apresentacao.html#evolucao">
+
+              <h2 style="background-color: var(--cor-terciaria); color: var(--cor-light); padding: 10px;" id="fontes">
+                Fontes
+              </h2>
+            </a>
+            <p class="border" style="background-color: var(--cor-dark1); color: var(--cor-light); padding: 20px;">Para
+              manter a coerência
+              visual do jogo, serão utilizadas duas fontes principais em todo o conteúdo criado: Arial e EB Garamond. A
+              fonte Arial será utilizada para conteúdo não gráfico, como textos de interface e informações em HUDs. Já a
+              fonte EB Garamond será utilizada para textos principais e títulos, trazendo um aspecto mais clássico e
+              elegante para o jogo.</p>
+          </div>
+        </div>
+        <div class="row vh-100">
+          <div class="col-md-6">
+            <a class="nav-link" href="apresentacao.html#feedback">
+
+              <h2 style="background-color: var(--cor-primaria); color: var(--cor-light); padding: 10px;" id="evolucao">
+                Evolução do jogo</h2>
+            </a>
+            <p class="border" style="background-color: var(--cor-dark1); color: var(--cor-light); padding: 20px;">O jogo
+              será evoluído de
+              forma colaborativa, seguindo o mesmo sistema utilizado pela Wikipédia. Isso significa que a comunidade
+              poderá
+              sugerir alterações, correções e melhorias no conteúdo e design do jogo. Para nossa versão do jogo,
+              inspirada
+              em Minecraft, os jogadores poderão colaborar na construção do mundo, criação de itens e estruturas, entre
+              outras atividades.</p>
+          </div>
+          <div class="col-md-6">
+            <h2 style="background-color: var(--cor-primaria); color: var(--cor-light); padding: 10px;"
+              id="padronizacao">
+              Padronização de itens
+            </h2>
+            <p class="border" style="background-color: var(--cor-dark1); color: var(--cor-light); padding: 20px;">Para
+              garantir a coesão e
+              equilíbrio do jogo, os itens serão padronizados de acordo com sua raridade e utilidade. Itens comuns serão
+              mais facilmente encontrados e terão utilidade básica, enquanto itens raros serão mais difíceis de serem
+              encontrados e terão maior utilidade e valor no jogo. Além disso, os itens serão classificados por
+              categorias,
+              como ferramentas, armas, armaduras, entre outras, para facilitar a identificação e organização dentro do
+              jogo.
+            </p>
+          </div>
+        </div>
+        <div class="row vh-100">
+          <div class="col-md-12">
+            <h2 style="background-color: var(--cor-secundaria); color: var(--cor-light); padding: 10px;" id="feedback">
+              Sistema de feedback
+            </h2>
+            <p class="border" style="background-color: var(--cor-dark1); color: var(--cor-light); padding: 20px;">Para
+              receber feedback e
+              sugestões da comunidade, será disponibilizado um sistema de feedback dentro do próprio jogo. Os jogadores
+              poderão enviar suas opiniões e sugestões para a equipe de desenvolvimento, que analisará e considerará as
+              sugestões para futuras atualizações do jogo.</p>
+          </div>
+        </div>
+</body>
+<footer>
+  <!-- Remove the container if you want to extend the Footer to full width. -->
+  <div class="container my-5">
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-black" style="background-color: var(--cor-dark1)">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">FOOTER CONTENT</h5>
+
+              <p class="border">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae modi cum ipsam ad, illo possimus laborum ut
+                reiciendis obcaecati. Ducimus, quas. Corrupti, pariatur eaque?
+                Reiciendis assumenda iusto sapiente inventore animi?
+              </p>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Links</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="text-black">Link 1</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Link 2</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Link 3</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Link 4</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Links</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="text-black">Link 1</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Link 2</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Link 3</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Link 4</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Links</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="text-black">Link 1</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Link 2</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Link 3</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Link 4</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Links</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="text-black">Link 1</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Link 2</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Link 3</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-black">Link 4</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+
+        <hr class="mb-4" />
+
+        <!-- Section: CTA -->
+        <section class="">
+          <p class="border" class="d-flex justify-content-center align-items-center">
+            <span class="me-3">Register for free</span>
+            <button type="button" class="btn btn-outline-light btn-rounded">
+              Sign up!
+            </button>
+          </p>
+        </section>
+        <!-- Section: CTA -->
+
+        <hr class="mb-4" />
+
+
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2023 Copyright:
+        <a class="text-white" href="http://www.etg.se.df.gov.br/">http://www.etg.se.df.gov.br/</a>
+      </div>
+    </footer>
+    <!-- Footer -->
+  </div>
+</footer>
+
+</html>

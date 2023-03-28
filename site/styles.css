@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+  font-family: 'EB Garamond', serif;
+--cor-primaria: #0074D9;
+--cor-secundaria: #2ECC40;
+--cor-terciaria: #FF851B;
+--cor-dark: #000000;
+--cor-light: #FFFFFF;
+--cor-darkprimaria: #BB86FC;
+--cor-darksecundaria: #03DAC6;
+--cor-darkterciaria: #CF6679;
+--cor-darkdark: #FFFFFF;
+--cor-darklight: #121212;
+--cor-lightprimaria: #0074D9;
+--cor-lightsecundaria: #2ECC40;
+--cor-lightterciaria: #FF851B;
+--cor-lightdark: #000000;
+--cor-lightlight: #FFFFFF;
+
+--cor-dark1: #80808080;
+--cor-darkdark1: #80808080;
+--cor-lightdark2: #000000;
+
+
+
+}
+#tablet {
+  width: 30%;
+  background-color: var(--cor-dark2);
+  color: var(--cor-light);
+  padding: 1rem;
+}
+#tablet2 {
+  width: 50%;
+  background-color: var(--cor-dark2);
+  color: var(--cor-light);
+}
+#tablet h2 {
+  color: var(--cor-secundaria);
+}
+
+#tablet p {
+  margin-top: rem;
+}
+
+.navbar-light {
+background-color: var(--cor-dark);
+color: var(--cor-light);
+}
+
+.navbar-brand {
+color: var(--cor-light);
+}
+
+.navbar-light .navbar-nav .nav-link:not(.active):not(:hover) {
+color: var(--cor-light);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+color: var(--cor-secundaria);
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.active:hover {
+color: var(--cor-terciaria);
+}
+
+.navbar-nav .nav-link {
+color: var(--cor-light);
+}
+
+.navbar-nav .nav-link.active {
+color: var(--cor-primaria);
+}
+
+.form-control {
+border-color: var(--cor-secundaria);
+}
+
+.btn-outline-success {
+color: var(--cor-secundaria);
+border-color: var(--cor-secundaria);
+}
+
+/* adicione mais estilos personalizados aqui */
+.logo {
+width: 100px;
+}
+
+/* fonte /
+/ Estilo para o cabeçalho */
+header {
+background-color: var(--cor-primaria);
+color: var(--cor-light);
+padding: 20px;
+text-align: center;
+}
+
+/* Estilo para o texto principal */
+.container {
+margin-top: 50px;
+margin-bottom: 50px;
+}
+
+
+p {
+text-align: justify;
+}
+
+/* pedia */
+.sidebar {
+background-color: var(--cor-light);
+padding: 20px;
+border: 1px solid #ddd;
+margin-top: 20px;
+}
+
+.sidebar img {
+max-width: 100%;
+display: block;
+margin-bottom: 10px;
+}
+
+.sidebar h2 {
+font-size: 24px;
+margin-top: 0;
+margin-bottom: 10px;
+}
+
+.sidebar ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+.sidebar li {
+margin-bottom: 5px;
+}
+
+
+/* Estilo para h1 */
+h1 {
+    color: var(--cor-primaria);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilo para h2 */
+  h2 {
+    color: var(--cor-primaria);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilo para h3 */
+  h3 {
+    color: var(--cor-primaria);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilo para h4 */
+  h4 {
+    color: var(--cor-primaria);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilo para h5 */
+  h5 {
+    color: var(--cor-primaria);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilo para h6 */
+  h6 {
+    color: var(--cor-primaria);
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  body {
+    font-family: 'EB Garamond', serif;
+
+    background-color: var(--cor-light);
+    color: var(--cor-dark);
+    margin:0px;
+    padding:0px;
+    width:100%;
+    overflow-y: scroll;
+  
+  }

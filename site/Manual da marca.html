@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Fonte EB Garamond -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/script.js"></script>
+    <style>
+        body {
+            background-color: var(--cor-light);
+        }
+    </style>
+</head>
+
+<body class="bg">
+    <div class="container">
+        <div class="starfield"></div>
+        <div class="content">
+            <div class="star-field" style="  z-index: -99;">
+                <div class="layer"z-index: -99;></div>
+                <div class="layer" z-index: -99;></div>
+                <div class="layer" z-index: -99;></div>
+                <!--background-->
+          <!-- Scrollable content here -->
+        </div>
+      </div>
+      
+
+
+
+        <!--background-->
+        <nav class=" navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="assets/logo.png" width="90" alt="">
+            </a>
+            <button onclick="toggleMode()" class="btn btn-primary "></button>
+
+
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Página Inicial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="apresentacao.html">Apresentação</a>
+                        </li>
+                        <li class="nav-item ative">
+                            <a class="nav-link" href="Manual da marca.html">Artigos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Manual da marca</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Gerenciamento de Usuário
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                                <li><a class="dropdown-item" href="#">Login</a></li>
+                                <li><a class="dropdown-item" href="#">Registro</a></li>
+                                <li><a class="dropdown-item" href="#">Recuperação de Senha</a></li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Página Inicial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pesquisa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Artigos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manual.html">Manual da Marca</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Gerenciamento de Usuário
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="#">Login</a></li>
+                            <li><a class="dropdown-item" href="#">Registro</a></li>
+                            <li><a class="dropdown-item" href="#">Recuperação de Senha</a></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        </nav>
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="title">Lorem </h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget neque nec mauris ultrices
+                    sagittis. Donec gravida ipsum eget mi hendrerit, eu vestibulum ex euismod. Praesent mattis tincidunt
+                    velit ac interdum. Nulla facilisi. Nullam vehicula, nibh at ultricies ullamcorper, quam odio
+                    ultricies tellus, a volutpat tellus ex sed ipsum. Fusce lobortis purus justo, nec dictum augue
+                    tincidunt sit amet. Vestibulum in nisl quis enim laoreet tincidunt. Suspendisse ut ante sed lorem
+                    tristique elementum sed quis urna.</p>
+                <div class="col-md-6 container-fluid" id="tablet2">
+
+                    <h2>Manual da marca</h2>
+                    <p>Introdução</p>
+                    <p>Fontes</p>
+                    <p>Evolução do jogo</p>
+                    <p>Padronização de itens e configurações</p>
+                    <p>Feedback e sugestões</p>
+                    <p>Conclusão</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 container-fluid" id="tablet">
+                <img src="assets/logo.png" width="300" alt="">
+
+                <h2>Manual da marca</h2>
+                <p>Introdução</p>
+                <p>Fontes</p>
+                <p>Evolução do jogo</p>
+                <p>Padronização de itens e configurações</p>
+                <p>Feedback e sugestões</p>
+                <p>Conclusão</p>
+                <h2>Primeiro objeto</h2>
+                <p>Descrição do primeiro objeto.</p>
+            </div>
+
+            <body>
+                <div class="container">
+                    <div class="titulo">
+                        <h1>Regras do Jogo</h1>
+                        <p>Conheça as regras para jogar corretamente</p>
+                    </div>
+
+                    <div class="topicos">
+                        <div class="topico">
+                            <h2>Objetivo do jogo</h2>
+                            <p>O objetivo do jogo é...</p>
+                        </div>
+                        <div class="topico">
+                            <h2>Número de jogadores</h2>
+                            <p>O jogo é jogado com...</p>
+                        </div>
+                        <div class="topico">
+                            <h2>Preparação do jogo</h2>
+                            <p>Para se preparar para jogar, faça...</p>
+                        </div>
+                        <div class="topico">
+                            <h2>Desenvolvimento do jogo</h2>
+                            <p>Para jogar o jogo, é necessário seguir as seguintes etapas...</p>
+                        </div>
+                        <div class="topico">
+                            <h2>Final do jogo</h2>
+                            <p>O jogo termina quando...</p>
+                        </div>
+                        <div class="topico">
+                            <h2>Regras adicionais</h2>
+                            <p>Além das regras mencionadas acima, há também...</p>
+                        </div>
+                    </div>
+                </div>
+            </body>
+
+        </div>
+
+
+</body>

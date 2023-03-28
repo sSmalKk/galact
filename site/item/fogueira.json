@@ -1,0 +1,33 @@
+{
+    "nome": "Fogueira",
+    "id": "fogueira001",
+    "tipo": "item",
+    "textura": "assets/fogueira.png",
+    "modelo3d": {
+        "vertices": [
+            [0, 0, 0],
+            [1, 0, 0],
+            [1, 1, 0],
+            [0, 1, 0],
+            [0, 0, 1],
+            [1, 0, 1],
+            [1, 1, 1],
+            [0, 1, 1]
+        ],
+        "faces": [
+            {"vertice": [0, 1, 2, 3], "textura": [0, 1, 2, 3]},
+            {"vertice": [1, 5, 6, 2], "textura": [0, 1, 2, 3]},
+            {"vertice": [5, 4, 7, 6], "textura": [0, 1, 2, 3]},
+            {"vertice": [4, 0, 3, 7], "textura": [0, 1, 2, 3]},
+            {"vertice": [3, 2, 6, 7], "textura": [0, 1, 2, 3]},
+            {"vertice": [4, 5, 1, 0], "textura": [0, 1, 2, 3]}
+        ]
+    },
+    "crafting": {
+        "ingredientes": [
+            {"item": "gravetos", "quantidade": 2},
+            {"item": "pedra", "quantidade": 3}
+        ],
+        "resultado": {"item": "fogueira", "quantidade": 1}
+    }
+}
